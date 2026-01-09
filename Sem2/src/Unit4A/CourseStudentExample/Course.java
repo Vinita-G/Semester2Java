@@ -3,19 +3,38 @@ package Unit4A.CourseStudentExample;
 public class Course {
     private String teacherName, subject, currentGrade;
     private int period;
+    static int biggestSubjectLength = 0;
 
     public Course(String teacherName, String subject, String currentGrade, int period) {
+        String spaces = "";
         this.teacherName = teacherName;
-        this.subject = subject;
-        this.currentGrade = currentGrade;
         this.period = period;
+
+        if(currentGrade.length() == 1){
+            this.currentGrade = currentGrade + " ";
+        }
+        else {
+            this.currentGrade = currentGrade;
+        }
+
+        for(int i = 0; i < 40 - subject.length(); i++){
+             spaces += " ";
+        }
+        this.subject = subject + spaces;
     }
 
     public Course(String subject, int period) {
+        String spaces = "";
+
         teacherName = "";
-        this.subject = subject;
-        currentGrade = "";
+        currentGrade = "  ";
         this.period = period;
+
+        for(int i = 0; i < 40 - subject.length(); i++){
+            spaces += " ";
+        }
+
+        this.subject = subject + spaces;
     }
 
     public String getTeacherName() {
@@ -50,7 +69,7 @@ public class Course {
         this.period = period;
     }
 
-    public String toString(){
-        return "Per: " + period + "    " + subject + "    " + teacherName;
+    public String courseToString(){
+        return "Per: " + period + "    " + currentGrade + "    " + subject + "    " + teacherName;
     }
 }
