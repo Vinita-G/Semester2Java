@@ -6,7 +6,6 @@ public class Course {
     static int biggestSubjectLength = 0;
 
     public Course(String teacherName, String subject, String currentGrade, int period) {
-        String spaces = "";
         this.teacherName = teacherName;
         this.period = period;
 
@@ -16,25 +15,14 @@ public class Course {
         else {
             this.currentGrade = currentGrade;
         }
-
-        for(int i = 0; i < 40 - subject.length(); i++){
-             spaces += " ";
-        }
-        this.subject = subject + spaces;
+        this.subject = subject;
     }
 
     public Course(String subject, int period) {
-        String spaces = "";
-
         teacherName = "";
         currentGrade = "  ";
         this.period = period;
-
-        for(int i = 0; i < 40 - subject.length(); i++){
-            spaces += " ";
-        }
-
-        this.subject = subject + spaces;
+        this.subject = subject;
     }
 
     public String getTeacherName() {
@@ -49,8 +37,8 @@ public class Course {
         return subject;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setSubject(String newsubject) {
+        this.subject = newsubject;
     }
 
     public String getCurrentGrade() {
@@ -70,10 +58,6 @@ public class Course {
     }
 
     public String courseToString(){
-<<<<<<< HEAD
-        return "Per: " + period + "    " + subject + "    " + teacherName;
-=======
         return "Per: " + period + "    " + currentGrade + "    " + subject + "    " + teacherName;
->>>>>>> d715df1e771fd666b6fb6f39ea7dedfedecc882a
     }
 }
