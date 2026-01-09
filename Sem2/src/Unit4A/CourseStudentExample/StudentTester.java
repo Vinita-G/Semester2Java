@@ -1,7 +1,59 @@
 package Unit4A.CourseStudentExample;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class StudentTester {
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException {
+        /*
+        Scanner inF = new Scanner(new File("oneCourse.txt"));
+
+        String teacher = inF.nextLine();
+        String subject = inF.nextLine();
+        String grade = inF.nextLine();
+        int period = inF.nextInt();
+
+        Course c = new Course(teacher, subject, grade, period);
+        System.out.println(c.courseToString());
+
+        //close scanner
+        inF.close();
+         */
+        Scanner inSchedule= new Scanner(new File("oneSchedule.txt"));
+
+        String studentName = inSchedule.nextLine();
+        Course[] classes = new Course[8];
+
+        for(int i = 0; i < classes.length; i++){
+
+            String teacher = inSchedule.nextLine();
+            String subject = inSchedule.nextLine();
+            String gradeInput = inSchedule.nextLine();
+            int period = inSchedule.nextInt();
+            String grade;
+
+            if(gradeInput.equals("None")){
+                grade = "";
+            }
+            else{
+                grade = gradeInput;
+            }
+
+            if(inSchedule.hasNextLine()){
+                inSchedule.nextLine();
+            }
+
+            Course c = new Course(teacher, subject, grade, period);
+            classes[i] = c;
+        }
+
+        Student s = new Student(studentName, classes);
+        System.out.println(s.studentToString());
+
+
+
+        /*
         System.out.println("There is a 40 character cap on the subject names");
         Course pe = new Course("Vlaming", "Basketball PE", "A", 1);
         Course math = new Course("Higgins", "Trig Calc A", "B+", 2);
@@ -15,5 +67,6 @@ public class StudentTester {
         Course[] list = {pe, math, sci, lunch, lit, psych, studyHall, spanish};
         Student a = new Student("Molly Jones", list);
         System.out.println(a.studentToString());
+         */
     }
 }
