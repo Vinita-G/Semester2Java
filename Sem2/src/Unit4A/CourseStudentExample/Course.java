@@ -50,7 +50,7 @@ public class Course {
         this.period = period;
     }
 
-    public String toString(){
+    public String courseToString(){
         return "Per: " + period + "    " + subject + "    " + teacherName;
     }
 }

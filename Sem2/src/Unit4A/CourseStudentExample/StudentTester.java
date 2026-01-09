@@ -11,7 +11,9 @@ public class StudentTester {
         Course studyHall = new Course("Study Hall", 7);
         Course spanish = new Course("Lernor", "Spanish 3", "A-", 8);
 
-        Course[] arr = {pe, math, sci, lunch, lit, psych, studyHall, spanish};
-        Student.toString(arr);
+
+        Course[] list = {pe, math, sci, lunch, lit, psych, studyHall, spanish};
+        Student a = new Student("Molly Jones", list);
+        System.out.println(a.studentToString());
     }
 }
