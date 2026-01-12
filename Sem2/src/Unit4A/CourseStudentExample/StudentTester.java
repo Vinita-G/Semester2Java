@@ -20,6 +20,8 @@ public class StudentTester {
         //close scanner
         inF.close();
          */
+
+        /*
         Scanner inSchedule= new Scanner(new File("oneSchedule.txt"));
 
         String studentName = inSchedule.nextLine();
@@ -34,7 +36,7 @@ public class StudentTester {
             String grade;
 
             if(gradeInput.equals("None")){
-                grade = "";
+                grade = " ";
             }
             else{
                 grade = gradeInput;
@@ -50,8 +52,60 @@ public class StudentTester {
 
         Student s = new Student(studentName, classes);
         System.out.println(s.studentToString());
+         */
 
+        /*
+        create a scanner for the studentScheduleData.txt file
+        read max number of students
+        create s student array f this size
+        Outer loop
+            read in name
+            reate course
+            innerloop:
+                will read course data
+                create the course add to course array
+            create a student
+            add student to student array
 
+            print student array for accuracy
+         */
+        Scanner input = new Scanner(new File("studentScheduleData.txt"));
+        int numStudents = input.nextInt();
+        Student[] students = new Student[numStudents];
+
+        int i = 0;
+        while(i < numStudents && input.hasNextLine()){
+            String studentName = input.nextLine();
+            Course[] classes = new Course[8];
+
+            for(int j = 0; j < classes.length; j++){
+
+                String teacher = input.nextLine();
+                String subject = input.nextLine();
+                String gradeInput = input.nextLine();
+                int period = input.nextInt();
+                String grade;
+
+                if(gradeInput.equals("None")){
+                    grade = " ";
+                }
+                else{
+                    grade = gradeInput;
+                }
+
+                if(input.hasNextLine()){
+                    input.nextLine();
+                }
+
+                Course c = new Course(teacher, subject, grade, period);
+                classes[i] = c;
+            }
+
+            Student a = new Student(studentName, classes);
+            students[i] = a;
+
+            i++;
+        }
 
         /*
         System.out.println("There is a 40 character cap on the subject names");
