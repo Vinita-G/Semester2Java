@@ -30,7 +30,7 @@ public class Student {
         this.myClasses = newClasses;
     }
 
-    public String studentToString(){
+    public String toString(){
         String result = "Student Name: " + name ;
         int longestSubjStr = 0;
 

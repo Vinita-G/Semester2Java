@@ -1,0 +1,15 @@
+The Legend of Zelda,Nintendo,Switch,2017,59.99,Adventure
+Minecraft,Mojang,PC,2011,26.95,Sandbox
+Fortnite,Epic Games,PC,2017,0.00,Shooter
+Stardew Valley,ConcernedApe,PC,2016,14.99,RPG
+Super Mario Odyssey,Nintendo,Switch,2017,59.99,Platformer
+Among Us,Innersloth,PC,2018,4.99,Party
+Celeste,Matt Makes Games,PC,2018,19.99,Platformer
+Hades,Supergiant Games,PC,2020,24.99,Action
+Animal Crossing,Nintendo,Switch,2020,59.99,Simulation
+Portal 2,Valve,PC,2011,19.99,Puzzle
+Hollow Knight,Team Cherry,PC,2017,14.99,Metroidvania
+Terraria,Re-Logic,PC,2011,9.99,Sandbox
+Overcooked,Ghost Town Games,PC,2016,16.99,Party
+Cuphead,Studio MDHR,PC,2017,19.99,Run and Gun
+Undertale,Toby Fox,PC,2015,9.99,RPG
