@@ -14,10 +14,17 @@ public class VideoGame {
         this.price = price;
         this.category = category;
     }
+    //need 25 spaces for string name
+    //need 25 for maker
+    // 10 for platfor
+    // six for year
+    // 8.2 for price
+    //20 for category
 
     public String toString(){
-        return "Title: " + title + "Publisher: " + publisher +"Platform: " + platform +"Year: " + year +
-                "Price: " + price + "Category: " + category;
+        return String.format("%-25s %-25s %-10s %-6d $ %6.2f %4s %-20s", title, publisher, platform, year, price," ",category);
+        // return "Title: " + title + "Publisher: " + publisher +"Platform: " + platform +"Year: " + year +
+        //"Price: " + price + "Category: " + category;
     }
 
 }

@@ -36,6 +36,9 @@ public class VideoGameTester {
             VideoGame v = new VideoGame(title, publisher, platform, year, price, category);
             games.add(v);
         }
+        System.out.println();
+        System.out.println(String.format("%-25s %-25s %-10s %-6s %-6s %4s %-20s","Title:", "Publisher:", "Platform:", "Year:", "Price:", " ","Category:"));
+        System.out.println("--------------------------------------------------------------------------------------------------------");
         for(VideoGame v: games){
             System.out.println(v);
         }
