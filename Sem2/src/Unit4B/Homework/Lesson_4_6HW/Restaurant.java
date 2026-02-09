@@ -1,4 +1,4 @@
-package Unit4B.Lesson_4_6.Lesson_4_6HW;
+package Unit4B.Homework.Lesson_4_6HW;
 
 public class Restaurant {
     private int id;
