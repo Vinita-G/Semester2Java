@@ -52,75 +52,90 @@ public class Notes_7_4_Examples {
         names.add("Adi");
         names.add("Noah");
 
-        ArrayList<String> repeatNames = new ArrayList<>();
-        names.add("Mya");
-        names.add("John");
-        names.add("Kim");
-        names.add("Sanjana");
-        names.add("Adi");
-        names.add("Mya");
+        // everything commented out is what i used to test my code
 
-        System.out.println(findMin(numsRepeats));
-        System.out.println("**should be: 1");
+//        ArrayList<String> repeatNames = new ArrayList<>();
+//        repeatNames.add("Mya");
+//        repeatNames.add("John");
+//        repeatNames.add("Kim");
+//        repeatNames.add("Sanjana");
+//        repeatNames.add("Adi");
+//        repeatNames.add("Mya");
 
-        System.out.println();
-        System.out.println(findMax(numsRepeats));
-        System.out.println("**should be: 8");
-
-        System.out.println();
-        System.out.println(findMin(numsNoRepeats));
-        System.out.println("**should be: 1");
-
-        System.out.println();
-        System.out.println(findMax(numsNoRepeats));
-        System.out.println("**should be: 9");
-
-        System.out.println();
-        System.out.println(findSum(numsNoRepeats));
-        System.out.println("**should be: 28");
-
-        System.out.println();
-        System.out.println(findSum(numsRepeats));
-        System.out.println("**should be: 24");
-
-        System.out.println();
-        System.out.println(findAverage(numsRepeats));
-        System.out.println("**should be: 4");
-
-        System.out.println();
-        System.out.println(isIncreasing(numsNoRepeats));
-        System.out.println("**should be: false");
-
-        System.out.println();
-        System.out.println(isIncreasing(orderedNums));
-        System.out.println("**should be: true");
-
-        System.out.println();
-        System.out.println(hasDuplicates(names));
-        System.out.println("**should be: false");
-
-        System.out.println();
-        System.out.println(hasDuplicates(repeatNames));
-        System.out.println("**should be: true");
-
-        System.out.println();
-
-        revArrayList(names);
-        System.out.print("[ ");
-        for(String a: names){
-            System.out.print(a + ", ");
-        }
-        System.out.println("]");
-        System.out.println("**should be: [ Noah, Adi, Sanjana, Kim, John, Mya ]");
-
-        shiftLeft(names);
-        System.out.print("[ ");
-        for(String a: names){
-            System.out.print(a + ", ");
-        }
-        System.out.println("]");
-        System.out.println("**should be: [ John, Kim, Sanjana, Adi, Noah, Mya ]");
-
+//        System.out.println("findMin:");
+//        System.out.println(findMin(numsRepeats));
+//        System.out.println("**should be: 1");
+//
+//        System.out.println();
+//        System.out.println("findMax");
+//        System.out.println(findMax(numsRepeats));
+//        System.out.println("**should be: 8");
+//
+//        System.out.println();
+//        System.out.println("findMin");
+//        System.out.println(findMin(numsNoRepeats));
+//        System.out.println("**should be: 1");
+//
+//        System.out.println();
+//        System.out.println("findMax");
+//        System.out.println(findMax(numsNoRepeats));
+//        System.out.println("**should be: 9");
+//
+//        System.out.println();
+//        System.out.println("findSum");
+//        System.out.println(findSum(numsNoRepeats));
+//        System.out.println("**should be: 28");
+//
+//        System.out.println();
+//        System.out.println("findSum");
+//        System.out.println(findSum(numsRepeats));
+//        System.out.println("**should be: 24");
+//
+//        System.out.println();
+//        System.out.println("findAverage");
+//        System.out.println(findAverage(numsRepeats));
+//        System.out.println("**should be: 4");
+//
+//        System.out.println();
+//        System.out.println("isIncreasing");
+//        System.out.println(isIncreasing(numsNoRepeats));
+//        System.out.println("**should be: false");
+//
+//        System.out.println();
+//        System.out.println("isIncreasing");
+//        System.out.println(isIncreasing(orderedNums));
+//        System.out.println("**should be: true");
+//
+//        System.out.println();
+//        System.out.println("hasDuplicates");
+//        System.out.println(hasDuplicates(names));
+//        System.out.println("**should be: false");
+//
+//        System.out.println();
+//        System.out.println("hasDuplicates");
+//        System.out.println(hasDuplicates(repeatNames));
+//        System.out.println("**should be: true");
+//
+//        System.out.println();
+//        System.out.println("revArrayList");
+//        ArrayList<String> display = revArrayList(names);
+//        System.out.print("[ ");
+//        for(String a: display){
+//            System.out.print(a + ", ");
+//        }
+//        System.out.println("]");
+//        System.out.println("**should be: [ Noah, Adi, Sanjana, Kim, John, Mya ]");
+//
+//        System.out.println();
+//        System.out.println("shiftLeft");
+//        shiftLeft(names);
+//        System.out.print("[ ");
+//        for(String a: names){
+//            System.out.print(a + ", ");
+//        }
+//        System.out.println("]");
+//        System.out.println("**should be: [ John, Kim, Sanjana, Adi, Noah, Mya ]");
+//
     }
 
     /**
@@ -205,7 +220,7 @@ public class Notes_7_4_Examples {
     public static boolean hasDuplicates(ArrayList<String> list) {
         for(int i = 0; i < list.size(); i++){
             for(int j = 0; j < list.size(); j++){
-                if(list.get(i) == list.get(j)){
+                if(j != i && list.get(i).equals(list.get(j))){
                     return true;
                 }
             }
@@ -239,6 +254,4 @@ public class Notes_7_4_Examples {
         list.remove(0);
         list.add(first);
     }
-
-
 }
